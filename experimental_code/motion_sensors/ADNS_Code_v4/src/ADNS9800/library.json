@@ -1,0 +1,19 @@
+{
+    "name": "NavigationSensor-ADNS9800",
+    "version": "1.0.0",
+    "keywords": "navigation, sensor, optical, displacement, adns",
+    "description": "Library for reading from Optical Navigation Sensors such as the ADNS-9800",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/markbucklin/NavigationSensor.git"
+    },
+    "dependencies": {
+        "name": "NavigationSensor-Core",
+        "frameworks": "arduino"
+    },
+    "export": {
+        "include": "src/ADNS9800"
+    },
+    "platforms": "*",
+    "frameworks": "arduino"
+}

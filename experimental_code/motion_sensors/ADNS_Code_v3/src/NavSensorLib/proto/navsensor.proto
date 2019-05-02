@@ -1,0 +1,161 @@
+// Protocol-Buffers file defining format of sensor measurements for sending of
+// serial line and saving in file
+
+syntax  = "proto2";
+package = navsensor;
+
+
+// =============================================================================
+// NavSensor Messages
+// =============================================================================
+// Data Output Message Types
+message Displacement {
+  required float x    = 1;
+  required float y    = 2;
+  optional sint32 t = 3;
+}
+message Position {
+  required float x    = 1;
+  required float y    = 2;
+  optional sint32 t = 3;
+}
+message FrameInfo {
+  message Status {
+    optional bytes motion      = 1 [ max_size = 1 ];   // [mot|fault|LaserPowerValid|opmode1,opmode0|framepixfirst]
+    optional bytes observation = 2 [ max_size = 1 ];   // 0xFF = running, 0x00 = no response
+  }
+  message PixelStatistics {
+    optional uint32 min      = 1;   // min pixel intensity: [0,127]
+    optional uint32 mean     = 2;   // mean = sumH * 512/900  or sumH/1.76: [0,223]
+    optional uint32 max      = 3;   // max intensity: [0,127]
+    optional uint32 features = 4;   // number of features (actual count = feature * 4): [0,169]
+  }                                                     
+  message PeriodMicros {                                
+    optional uint32 shutter = 1;   // microseconds
+    optional uint32 frame   = 2;   // microseconds
+  }                                                     
+  optional Status status                    = 1;   // raw bitfields from status registers
+  optional PixelStatistics pixel_statistics = 2;   // image-stats -> min,mean,max,features
+  optional PeriodMicros period              = 3;   // length of shutter and frame period in microseconds
+}
+
+// =============================================================================
+// Stream/Packet/Bundle/Message Heirarchy
+// =============================================================================
+message DataMessage {
+  optional uint32 id = 1;
+  oneof data {
+    Displacement displacement = 2;
+    Position     position     = 3;
+    FrameInfo    frame_info   = 4;
+  }
+}
+message MessageBundle {
+  optional uint32 id       = 1;
+  optional uint32 count    = 2;
+  repeated DataMessage msg = 3;
+}
+
+// =============================================================================
+// Generic Messaging format
+// =============================================================================
+message Packet {
+  optional Time timestamp = 1;
+  optional uint32 seq     = 2;
+  oneof payload {
+    DataMessage   msg    = 3;
+    MessageBundle bundle = 4;
+  }
+}
+message Stream {
+  optional string name    = 1;
+  optional Time timestart = 2;
+  optional uint32 count   = 3;
+  repeated Packet packet  = 4;
+}
+
+//? what
+//* highlight
+// todo
+// service SearchService {
+//     rpc Search (SearchRequest) returns (SearchResponse);
+//     rpc Search2 (stream SearchRequest) returns (stream SearchResponse);
+//   }
+
+// // message Sample{
+// //     optional int32 id = 1;
+// //     optional int32 count = 2;
+// //     optional Time timestamp = 3;
+// //     optional Displacement displacement = 4;
+// //     optional Position position = 5;
+// //     optional AdditionalInfo info = 6;
+// // }
+// // message DisplacementBundle{
+// //     optional int32 count = 1;
+// //     optional Time timestamp = 2;
+// //     repeated Displacement displacement = 3 [max_count = 8]; //
+// [(nanopb).max_count = 8]
+// // }
+
+// // message SampleBundle{
+// //     optional int32 count = 1;
+// //     optional Time timestamp = 2;
+// //     repeated group Result = 1 {
+// //         required string url = 2;
+// //         optional string title = 3;
+// //         repeated string snippets = 4;
+// //     };
+// // }
+// todo SensorEvent
+
+// compile using --descriptor_set_out
+// message SelfDescribingMessage {
+//     required FileDescriptorSet proto_files = 1;
+
+//     // Name of the message type.  Must be defined by one of the files in
+//     // proto_files.
+//     required string type_name = 2;
+
+//     // The message data.
+//     required bytes message_data = 3;
+// }
+
+// OPTIONS
+// todo: implement options for performance
+// label type ident = num;
+// repeated type ident = num [packed = true];
+// repeated type ident = num [max_count = 1];
+// label bytes ident = num    [max_size = 1]
+// ----- in file -> navsensor.options
+// DataPacket.name         max-size:40
+// DataPacket.data         max_count:16
+// DataPacket.timestamp    fixed_length:true
+//
+// ----- inline
+// required string name = 1 [(nanopb).max_size = 40];
+// repeated int32 ids = 4   [(nanopb).max_count = 5];
+// option java_package = "com.example.foo";
+
+// // Sensor ID Class
+// // message SensorID{
+// //     optional int32 num = 1;
+// //     optional string name = 2 [max_size = 40];
+// // }
+
+// todo union style support for various time types such as integer:fractional
+// (OSC) messages or sfixed64
+
+// Sensor class from android api
+  // maxDelay
+  // fifoMaxEventCount
+  // highestDirectReportRateLevel
+  // fifoReservedEventCount
+  // power
+  // maximumRange
+  // vendor
+  // stringType
+  // reportingMode
+  // isAdditionalInfoSupported()
+  // isDirectChannelTypeSupported()
+  // isDynamicSensor()
+  // isWakeupSensor()

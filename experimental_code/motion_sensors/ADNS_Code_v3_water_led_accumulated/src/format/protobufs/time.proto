@@ -1,0 +1,83 @@
+// Protocol-Buffers file defining high-precision time and duration data structures
+
+syntax  = "proto2";
+package = devicelib;
+
+import "google/protobuf/time.proto";
+
+// #include <google/protobuf/util/time_util.h>
+// namespace google::protobuf::util
+
+syntax = "proto3";
+
+package v3;
+
+// import "google/protobuf/any.proto";
+// import "google/protobuf/empty.proto";
+// import "google/protobuf/timestamp.proto";
+// import "google/protobuf/duration.proto";
+
+// message MessageName {
+//     google.protobuf.Any any = 1;
+//     google.protobuf.Empty enpty = 2;
+//     google.protobuf.Timestamp ts = 3;
+//     google.protobuf.Duration d = 4;
+// }
+
+
+
+message TimeInfo
+{
+  required TimeType type = 1;
+  optional float resolution = 2;
+  optional Timestamp epoch;
+}
+
+enum TimeType
+{
+  SEC_INT64_NSEC_INT32 = 0;
+  SEC_UINT32_NSEC_UINT32 = 1;
+  NANOSECONDS_INT64 = 2;
+  SECONDS_FLOAT32 = 3;
+  SECONDS_FLOAT64 = 4;
+  STRING_RFC3339 = 5;
+}
+
+message Time 
+{
+  optional uint32 sec  = 1;
+  optional uint32 nsec = 2;
+}
+
+message Duration 
+{
+  optional sint32 sec  = 1;
+  optional sint32 nsec = 2;
+}
+
+message Timestamp
+{
+
+}
+
+
+// //     oneof time{
+// //         TimeSecNsec //todo
+// //     }
+// // }
+// todo: test/implement fixed32 vs uint32 and sfixed32 vs sint32 (more efficient
+// if values often > 2^28)
+
+
+// =============================================================================
+// OPTION SNIPPETS
+// [default = 128]
+// [deprecated=true]
+// =============================================================================
+
+// =============================================================================
+// Time
+// =============================================================================
+// todo: Generic Time/Duration types + Timestamp type (or use proto3)
+// Time and Duration types matching ROS classes (note proto3 defines Timestamp
+// and Duration types)

@@ -1,0 +1,88 @@
+// Flatbuffers IDL schema for Events
+
+namespace DeviceLib; 
+
+enum MessageType:byte {
+    ADVERTISE, SUBSCRIBE, ADVERTISE_SERVICE, SUBSCRIBE_SERVICE, PUBLISH, REQUEST, REPLY_OK, REPLY_ERROR
+}
+enum PayloadType:byte {
+    INFO, COMMAND, SETTING, STATUS, ACTION, DATA
+}
+
+/// Generic DataFrame:
+///     A timestamped single instance collection of grouped synchronous DataPoints
+table DataPoint {
+     // point_id -> unique within DataFrame
+    point_id:int16; 
+    value:[ubyte](flexbuffer); 
+}
+table DataFrame {
+    frame_id:(key); 
+    time_start:int64; 
+    time_stop:int64; 
+    data:[DataPoint]; 
+}
+
+// Info
+table Tag {
+    key:string; 
+    value:[ubyte] (flexbuffer); 
+}
+struct UnitInfo {
+    
+}
+struct NumberInfo {
+    unit:UnitInfo
+    min:Data
+    max:Data
+    resolution:Data
+    num_bytes:uint8; 
+}
+table DataSeriesInfo {
+    index:int32 (key); 
+    type_code:flatbuffers::Type; 
+    field_name:string
+    sensor_id:int32; 
+    device_id:int32; 
+    meta_data:[object]
+}
+table DataSeriesRegistry {
+    series_count:uint16; 
+    type_count:uint16; 
+    channel_count:uint16; 
+    series_info:[DataSeriesInfo]; 
+}
+
+table Event {
+    type:EventType; 
+    id:int32; 
+    timestamp:uint64; 
+    data:EventData; 
+}
+
+
+
+root_type Event; 
+file_identifier "EVNT"; 
+file_extension "evnt"; 
+
+// 
+// ("streaming":true);
+// <table-field-name>:[ubyte](nested_flatbuffer:"DataMessage")
+// struct Vec2 {
+//     x:float; 
+//     y:float; 
+// }
+
+// union NumericValue{
+//     double_data:double;
+//     float_data:float;
+//     int64_data:int64;
+//     uint64_data:uint64;
+//     int32_data:int32;
+//     uint32_data:uint32;    
+// }
+// union 
+// bool_data:bool;
+//     string_data:string;
+//     bytes_data:bytes;

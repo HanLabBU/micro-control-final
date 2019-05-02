@@ -1,0 +1,1 @@
+This code is identical to ADNS_V2, except the time interval for each trigger is embedded into the end of everyloop in a short time interval. This, the majority of each loop is low digital pulse, and minority is high. This delivers one extra timestamp. Used for publication.

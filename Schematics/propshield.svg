@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Fritzing (http://www.fritzing.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.2"
+   x="0in"
+   y="0in"
+   width="1.43701in"
+   height="0.70275in"
+   viewBox="0 0 103.465 50.598"
+   id="svg217"
+   sodipodi:docname="propshield.svg"
+   inkscape:version="0.92.3 (d244b95, 2018-08-02)">
+  <metadata
+     id="metadata223">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs221" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2560"
+     inkscape:window-height="1391"
+     id="namedview219"
+     showgrid="false"
+     inkscape:zoom="6.77"
+     inkscape:cx="41.576187"
+     inkscape:cy="33.732001"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="breadboard" />
+  <g
+     partID="854140190"
+     id="g215">
+    <g
+       gorn="0.3.0"
+       id="breadboard"
+       transform="matrix(0.93837213,0,0,0.93837213,6.140541,0.1069202)">
+      <path
+         d="M 4.3349939,0 V 44.582062 H 93.000414 L 93.000423,0 Z M 39.150829,1.6793828 c 0.879338,0 1.596559,0.7163369 1.596559,1.5974402 0,0.8811033 -0.717217,1.5974402 -1.596559,1.5974402 -0.881101,0 -1.596559,-0.7163369 -1.596559,-1.5974402 8.81e-4,-0.8802222 0.715455,-1.5974402 1.596559,-1.5974402 z M 7.4303012,42.893869 c -0.881101,0 -1.5965595,-0.714575 -1.5965595,-1.595678 0,-0.879341 0.7154541,-1.597441 1.5965595,-1.597441 0.879338,0 1.5965589,0.716337 1.5965589,1.597441 0,0.881103 -0.7172179,1.595678 -1.5965589,1.595678 z m 0,-38.0204869 c -0.881101,0 -1.5965595,-0.7163369 -1.5965595,-1.5974402 0,-0.8793411 0.7154541,-1.5974402 1.5965595,-1.5974402 0.879338,0 1.5965589,0.7163369 1.5965589,1.5974402 0,0.8811033 -0.7172179,1.5974402 -1.5965589,1.5974402 z M 13.775143,42.893869 c -0.881101,0 -1.596559,-0.714575 -1.596559,-1.595678 0,-0.879341 0.715454,-1.597441 1.596559,-1.597441 0.879338,0 1.596559,0.716337 1.596559,1.597441 0,0.881103 -0.717218,1.595678 -1.596559,1.595678 z m 0,-38.0204869 c -0.881101,0 -1.596559,-0.7163369 -1.596559,-1.5974402 0,-0.8793411 0.715454,-1.5974402 1.596559,-1.5974402 0.879338,0 1.596559,0.7163369 1.596559,1.5974402 0,0.8811033 -0.717218,1.5974402 -1.596559,1.5974402 z m 6.343855,38.0204869 c -0.8811,0 -1.596559,-0.714575 -1.596559,-1.595678 0,-0.879341 0.715454,-1.597441 1.596559,-1.597441 0.879339,0 1.596559,0.716337 1.596559,1.597441 0,0.881103 -0.717218,1.595678 -1.596559,1.595678 z m 0,-38.0204869 c -0.8811,0 -1.596559,-0.7163369 -1.596559,-1.5974402 0,-0.8793411 0.715454,-1.5974402 1.596559,-1.5974402 0.879339,0 1.596559,0.7163369 1.596559,1.5974402 0,0.8811033 -0.717218,1.5974402 -1.596559,1.5974402 z m 6.343944,38.0204869 c -0.881101,0 -1.596559,-0.714575 -1.596559,-1.595678 0,-0.879341 0.715454,-1.597441 1.596559,-1.597441 0.879338,0 1.596559,0.716337 1.596559,1.597441 0,0.881103 -0.717218,1.595678 -1.596559,1.595678 z m 0,-38.0204869 c -0.881101,0 -1.596559,-0.7163369 -1.596559,-1.5974402 0,-0.8793411 0.715454,-1.5974402 1.596559,-1.5974402 0.879338,0 1.596559,0.7163369 1.596559,1.5974402 0,0.8811033 -0.717218,1.5974402 -1.596559,1.5974402 z m 6.343943,38.0204869 c -0.8811,0 -1.596559,-0.714575 -1.596559,-1.595678 0,-0.879341 0.715454,-1.597441 1.596559,-1.597441 0.879339,0 1.596559,0.716337 1.596559,1.597441 0,0.881103 -0.717218,1.595678 -1.596559,1.595678 z m 0,-38.0204869 c -0.8811,0 -1.596559,-0.7163369 -1.596559,-1.5974402 0,-0.8793411 0.715454,-1.5974402 1.596559,-1.5974402 0.879339,0 1.596559,0.7163369 1.596559,1.5974402 0,0.8811033 -0.717218,1.5974402 -1.596559,1.5974402 z m 6.343944,38.0204869 c -0.881101,0 -1.596559,-0.714575 -1.596559,-1.595678 0,-0.879341 0.715454,-1.597441 1.596559,-1.597441 0.879338,0 1.596559,0.716337 1.596559,1.597441 0,0.881103 -0.717218,1.595678 -1.596559,1.595678 z m 6.344824,0 c -0.8811,0 -1.596559,-0.714575 -1.596559,-1.595678 0,-0.879341 0.715454,-1.597441 1.596559,-1.597441 0.879339,0 1.596559,0.716337 1.596559,1.597441 0,0.881103 -0.717218,1.595678 -1.596559,1.595678 z m 0,-38.0204869 c -0.8811,0 -1.596559,-0.7163369 -1.596559,-1.5974402 0,-0.8793411 0.715454,-1.5974402 1.596559,-1.5974402 0.879339,0 1.596559,0.7163369 1.596559,1.5974402 0,0.8811033 -0.717218,1.5974402 -1.596559,1.5974402 z m 6.343856,38.0204869 c -0.881101,0 -1.597441,-0.714575 -1.597441,-1.595678 0,-0.879341 0.716335,-1.597441 1.597441,-1.597441 0.879338,0 1.59744,0.716337 1.59744,1.597441 0,0.881103 -0.718099,1.595678 -1.59744,1.595678 z m 0,-38.0204869 c -0.881101,0 -1.597441,-0.7163369 -1.597441,-1.5974402 0,-0.8793411 0.716335,-1.5974402 1.597441,-1.5974402 0.879338,0 1.59744,0.7163369 1.59744,1.5974402 0,0.8811033 -0.718099,1.5974402 -1.59744,1.5974402 z m 6.343943,38.0204869 c -0.881101,0 -1.596559,-0.714575 -1.596559,-1.595678 0,-0.879341 0.715454,-1.597441 1.596559,-1.597441 0.878457,0 1.596559,0.716337 1.596559,1.597441 0,0.881103 -0.718099,1.595678 -1.596559,1.595678 z m 0,-38.0204869 c -0.881101,0 -1.596559,-0.7163369 -1.596559,-1.5974402 0,-0.8793411 0.715454,-1.5974402 1.596559,-1.5974402 0.878457,0 1.596559,0.7163369 1.596559,1.5974402 0,0.8811033 -0.718099,1.5974402 -1.596559,1.5974402 z m 6.343943,38.0204869 c -0.8811,0 -1.59744,-0.714575 -1.59744,-1.595678 0,-0.879341 0.716335,-1.597441 1.59744,-1.597441 0.879339,0 1.596559,0.716337 1.596559,1.597441 0,0.881103 -0.717218,1.595678 -1.596559,1.595678 z m 0,-38.0204869 c -0.8811,0 -1.59744,-0.7163369 -1.59744,-1.5974402 0,-0.8793411 0.716335,-1.5974402 1.59744,-1.5974402 0.879339,0 1.596559,0.7163369 1.596559,1.5974402 0,0.8811033 -0.717218,1.5974402 -1.596559,1.5974402 z m 6.345706,38.0204869 c -0.881101,0 -1.59744,-0.714575 -1.59744,-1.595678 0,-0.879341 0.716335,-1.597441 1.59744,-1.597441 0.879338,0 1.59744,0.716337 1.59744,1.597441 0,0.881103 -0.718099,1.595678 -1.59744,1.595678 z m 0,-38.0204869 c -0.881101,0 -1.59744,-0.7163369 -1.59744,-1.5974402 0,-0.8793411 0.716335,-1.5974402 1.59744,-1.5974402 0.879338,0 1.59744,0.7163369 1.59744,1.5974402 0,0.8811033 -0.718099,1.5974402 -1.59744,1.5974402 z m 6.343062,38.0204869 c -0.8811,0 -1.595678,-0.714575 -1.595678,-1.595678 0,-0.879341 0.714573,-1.597441 1.595678,-1.597441 0.879339,0 1.597441,0.716337 1.597441,1.597441 0,0.881103 -0.7181,1.595678 -1.597441,1.595678 z m 0,-38.0204869 c -0.8811,0 -1.595678,-0.7163369 -1.595678,-1.5974402 0,-0.8793411 0.714573,-1.5974402 1.595678,-1.5974402 0.879339,0 1.597441,0.7163369 1.597441,1.5974402 0,0.8811033 -0.7181,1.5974402 -1.597441,1.5974402 z M 83.5609,42.893869 c -0.881101,0 -1.59744,-0.714575 -1.59744,-1.595678 0,-0.879341 0.716335,-1.597441 1.59744,-1.597441 0.879338,0 1.595678,0.716337 1.595678,1.597441 0,0.881103 -0.716337,1.595678 -1.595678,1.595678 z m 0,-38.0204869 c -0.881101,0 -1.59744,-0.7163369 -1.59744,-1.5974402 0,-0.8793411 0.716335,-1.5974402 1.59744,-1.5974402 0.879338,0 1.595678,0.7163369 1.595678,1.5974402 0,0.8811033 -0.716337,1.5974402 -1.595678,1.5974402 z m 6.343062,38.0204869 c -0.881101,0 -1.595678,-0.714575 -1.595678,-1.595678 0,-0.879341 0.714573,-1.597441 1.595678,-1.597441 0.879341,0 1.59744,0.716337 1.59744,1.597441 0,0.881103 -0.717835,1.595678 -1.59744,1.595678 z m 0,-6.30077 c -0.881101,0 -1.595678,-0.716337 -1.595678,-1.59744 0,-0.879341 0.714573,-1.59744 1.595678,-1.59744 0.879341,0 1.59744,0.716337 1.59744,1.59744 0,0.881103 -0.717835,1.59744 -1.59744,1.59744 z m 0,-6.343943 c -0.881101,0 -1.595678,-0.716337 -1.595678,-1.59744 0,-0.879341 0.714573,-1.597441 1.595678,-1.597441 0.879341,0 1.59744,0.716337 1.59744,1.597441 0,0.881103 -0.717835,1.59744 -1.59744,1.59744 z m 0,-6.345706 c -0.881101,0 -1.595678,-0.716337 -1.595678,-1.59744 0,-0.879341 0.714573,-1.59744 1.595678,-1.59744 0.879341,0 1.59744,0.716337 1.59744,1.59744 0,0.881103 -0.717835,1.59744 -1.59744,1.59744 z m 0,-6.343062 c -0.881101,0 -1.595678,-0.714575 -1.595678,-1.595678 0,-0.879341 0.714573,-1.59744 1.595678,-1.59744 0.879341,0 1.59744,0.716337 1.59744,1.59744 0,0.881103 -0.717835,1.595678 -1.59744,1.595678 z m 0,-6.344825 c -0.881101,0 -1.595678,-0.714574 -1.595678,-1.5956777 0,-0.879341 0.714573,-1.5974402 1.595678,-1.5974402 0.879341,0 1.59744,0.716337 1.59744,1.5974402 0,0.8811037 -0.717835,1.5956777 -1.59744,1.5956777 z m 0,-6.3421809 c -0.881101,0 -1.595678,-0.7163369 -1.595678,-1.5974402 0,-0.8793411 0.714573,-1.5974402 1.595678,-1.5974402 0.879341,0 1.59744,0.7163369 1.59744,1.5974402 0,0.8811033 -0.717835,1.5974402 -1.59744,1.5974402 z"
+         gorn="0.3.0.0"
+         id="_x30_.1"
+         inkscape:connector-curvature="0"
+         style="fill:#1a641a;fill-opacity:1;stroke-width:0.88110328"
+         sodipodi:nodetypes="cccccssscsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss" />
+      <g
+         transform="matrix(0.88110325,0,0,0.88110325,48.667977,38.051149)"
+         id="g212">
+        <g
+           id="g210">
+          <g
+             id="g208">
+            <g
+               gorn="0.3.0.24.0.0"
+               id="g7804">
+              <g
+                 gorn="0.3.0.24.0.0.0"
+                 id="g7806">
+                <g
+                   gorn="0.3.0.24.0.0.0.0"
+                   id="g7808">
+                  <g
+                     gorn="0.3.0.24.0.0.0.0.0"
+                     id="g7810">
+                    <g
+                       gorn="0.3.0.24.0.0.0.0.0.0"
+                       id="g7812">
+                      <g
+                         gorn="0.3.0.24.0.0.0.0.0.0.0"
+                         id="g156">
+                        <g
+                           gorn="0.3.0.24.0.0.0.0.0.0.0.0"
+                           id="g158">
+                          <g
+                             gorn="0.3.0.24.0.0.0.0.0.0.0.0.0"
+                             id="_x30_.25_1_">
+                            <g
+                               gorn="0.3.0.24.0.0.0.0.0.0.0.0.0.0"
+                               id="_x30_.25">
+                              <g
+                                 gorn="0.3.0.24.0.0.0.0.0.0.0.0.0.0.0"
+                                 id="_x30_.25.0">
+                                <g
+                                   transform="translate(0,-6.2002)"
+                                   id="g196">
+                                <g
+                                   id="g194">
+                                <g
+                                   id="g192">
+                                <g
+                                   gorn="0.3.0.24.0.0.0.0.0.0.0.0.0.0.0.0.0.0"
+                                   id="g7819">
+                                <text
+                                   gorn="0.3.0.24.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0"
+                                   font-size="0"
+                                   id="_x30_.25.0.0"
+                                   style="font-size:0px;font-family:OCRA;fill:#c8c8c8">teensy3.2</text>
+                                </g>
+                                </g>
+                                </g>
+                                </g>
+                              </g>
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g
+         gorn="0.3.0.23"
+         id="_x30_.26"
+         transform="matrix(0.88110325,0,0,0.88110325,0.33707109,0)">
+        <circle
+           cy="3.723"
+           gorn="0.3.0.23.0"
+           r="1.90799"
+           id="connector19pin"
+           cx="101.64311"
+           style="fill:none;stroke:#9a916c;stroke-width:1.22399998" />
+        <circle
+           cy="3.723"
+           gorn="0.3.0.23.1"
+           r="1.90799"
+           id="connector20pin"
+           cx="94.444115"
+           style="fill:none;stroke:#9a916c;stroke-width:1.22399998" />
+        <circle
+           cy="3.723"
+           gorn="0.3.0.23.2"
+           r="1.90799"
+           id="connector21pin"
+           cx="87.244217"
+           style="fill:none;stroke:#9a916c;stroke-width:1.22399998" />
+        <circle
+           cy="3.723"
+           gorn="0.3.0.23.3"
+           r="1.90799"
+           id="connector22pin"
+           cx="80.044212"
+           style="fill:none;stroke:#9a916c;stroke-width:1.22399998" />
+        <circle
+           cy="3.723"
+           gorn="0.3.0.23.4"
+           r="1.90799"
+           id="connector23pin"
+           cx="72.845215"
+           style="fill:none;stroke:#9a916c;stroke-width:1.22399998" />
+        <circle
+           cy="3.723"
+           gorn="0.3.0.23.5"
+           r="1.90799"
+           id="connector24pin"
+           cx="65.643219"
+           style="fill:none;stroke:#9a916c;stroke-width:1.22399998" />
+        <circle
+           cy="3.723"
+           gorn="0.3.0.23.6"
+           r="1.90799"
+           id="connector25pin"
+           cx="58.445217"
+           style="fill:none;stroke:#9a916c;stroke-width:1.22399998" />
+        <circle
+           cy="3.723"
+           gorn="0.3.0.23.7"
+           r="1.90799"
+           id="connector26pin"
+           cx="51.244316"
+           style="fill:none;stroke:#9a916c;stroke-width:1.22399998" />
+        <circle
+           cy="3.723"
+           gorn="0.3.0.23.8"
+           r="1.90799"
+           id="connector27pin"
+           cx="44.044315"
+           style="fill:none;stroke:#9a916c;stroke-width:1.22399998" />
+        <circle
+           cy="3.723"
+           gorn="0.3.0.23.9"
+           r="1.90799"
+           id="connector28pin"
+           cx="36.845314"
+           style="fill:none;stroke:#9a916c;stroke-width:1.22399998" />
+        <circle
+           cy="3.723"
+           gorn="0.3.0.23.10"
+           r="1.90799"
+           id="connector29pin"
+           cx="29.644318"
+           style="fill:none;stroke:#9a916c;stroke-width:1.22399998" />
+        <circle
+           cy="3.723"
+           gorn="0.3.0.23.11"
+           r="1.90799"
+           id="connector30pin"
+           cx="22.444315"
+           style="fill:none;stroke:#9a916c;stroke-width:1.22399998" />
+        <circle
+           cy="3.723"
+           gorn="0.3.0.23.12"
+           r="1.90799"
+           id="connector31pin"
+           cx="15.244415"
+           style="fill:none;stroke:#9a916c;stroke-width:1.22399998" />
+        <circle
+           cy="3.723"
+           gorn="0.3.0.23.13"
+           r="1.90799"
+           id="connector32pin"
+           cx="8.0443954"
+           style="fill:none;stroke:#9a916c;stroke-width:1.22399998" />
+        <circle
+           cy="46.922001"
+           gorn="0.3.0.23.17"
+           r="1.90799"
+           id="connector13pin"
+           cx="101.64311"
+           style="fill:none;stroke:#9a916c;stroke-width:1.22399998" />
+        <circle
+           cy="46.922001"
+           gorn="0.3.0.23.18"
+           r="1.90799"
+           id="connector12pin"
+           cx="94.444115"
+           style="fill:none;stroke:#9a916c;stroke-width:1.22399998" />
+        <circle
+           cy="46.922001"
+           gorn="0.3.0.23.19"
+           r="1.90799"
+           id="connector11pin"
+           cx="87.244217"
+           style="fill:none;stroke:#9a916c;stroke-width:1.22399998" />
+        <circle
+           cy="46.922001"
+           gorn="0.3.0.23.20"
+           r="1.90799"
+           id="connector10pin"
+           cx="80.044212"
+           style="fill:none;stroke:#9a916c;stroke-width:1.22399998" />
+        <circle
+           cy="46.922001"
+           gorn="0.3.0.23.21"
+           r="1.90799"
+           id="connector9pin"
+           cx="72.845215"
+           style="fill:none;stroke:#9a916c;stroke-width:1.22399998" />
+        <circle
+           cy="46.922001"
+           gorn="0.3.0.23.22"
+           r="1.90799"
+           id="connector8pin"
+           cx="65.643219"
+           style="fill:none;stroke:#9a916c;stroke-width:1.22399998" />
+        <circle
+           cy="46.922001"
+           gorn="0.3.0.23.23"
+           r="1.90799"
+           id="connector7pin"
+           cx="58.445217"
+           style="fill:none;stroke:#9a916c;stroke-width:1.22399998" />
+        <circle
+           cy="46.922001"
+           gorn="0.3.0.23.24"
+           r="1.90799"
+           id="connector6pin"
+           cx="51.244316"
+           style="fill:none;stroke:#9a916c;stroke-width:1.22399998" />
+        <circle
+           cy="46.922001"
+           gorn="0.3.0.23.25"
+           r="1.90799"
+           id="connector5pin"
+           cx="44.044315"
+           style="fill:none;stroke:#9a916c;stroke-width:1.22399998" />
+        <circle
+           cy="46.922001"
+           gorn="0.3.0.23.26"
+           r="1.90799"
+           id="connector4pin"
+           cx="36.845314"
+           style="fill:none;stroke:#9a916c;stroke-width:1.22399998" />
+        <circle
+           cy="46.922001"
+           gorn="0.3.0.23.27"
+           r="1.90799"
+           id="connector3pin"
+           cx="29.644318"
+           style="fill:none;stroke:#9a916c;stroke-width:1.22399998" />
+        <circle
+           cy="46.922001"
+           gorn="0.3.0.23.28"
+           r="1.90799"
+           id="connector2pin"
+           cx="22.444315"
+           style="fill:none;stroke:#9a916c;stroke-width:1.22399998" />
+        <circle
+           cy="46.922001"
+           gorn="0.3.0.23.29"
+           r="1.90799"
+           id="connector1pin"
+           cx="15.244415"
+           style="fill:none;stroke:#9a916c;stroke-width:1.22399998" />
+        <circle
+           cy="46.922001"
+           gorn="0.3.0.23.30"
+           r="1.90799"
+           id="connector0pin"
+           cx="8.0443954"
+           style="fill:none;stroke:#9a916c;stroke-width:1.22399998" />
+        <circle
+           cy="32.522999"
+           gorn="0.3.0.23.32"
+           r="1.90799"
+           id="connector15pin"
+           cx="101.64511"
+           style="fill:none;stroke:#9a916c;stroke-width:1.22399998" />
+        <circle
+           cy="39.723"
+           gorn="0.3.0.23.33"
+           r="1.90799"
+           id="connector14pin"
+           cx="101.64311"
+           style="fill:none;stroke:#9a916c;stroke-width:1.22399998" />
+        <circle
+           cy="25.323"
+           gorn="0.3.0.23.34"
+           r="1.90799"
+           id="connector16pin"
+           cx="101.64511"
+           style="fill:none;stroke:#9a916c;stroke-width:1.22399998" />
+        <circle
+           cy="10.923"
+           gorn="0.3.0.23.35"
+           r="1.90799"
+           id="connector18pin"
+           cx="101.64311"
+           style="fill:none;stroke:#9a916c;stroke-width:1.22399998" />
+        <circle
+           cy="18.122"
+           gorn="0.3.0.23.36"
+           r="1.90799"
+           id="connector17pin"
+           cx="101.64511"
+           style="fill:none;stroke:#9a916c;stroke-width:1.22399998" />
+      </g>
+      <rect
+         style="opacity:1;fill:#1a641a;fill-opacity:1;fill-rule:evenodd;stroke:#1a641a;stroke-width:0.12536414;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect4762"
+         width="10.6926"
+         height="44.582062"
+         x="93.00042"
+         y="1.110223e-16" />
+      <rect
+         style="opacity:1;fill:#1a641a;fill-opacity:1;fill-rule:evenodd;stroke:#1a641a;stroke-width:0.12525032;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect4762-1"
+         width="10.6926"
+         height="44.582062"
+         x="-4.3349938"
+         y="-5.5511151e-17"
+         transform="scale(-1,1)" />
+      <circle
+         cy="24.915899"
+         gorn="0.3.0.23.32"
+         r="1.6811363"
+         id="connector15pin-8-7"
+         cx="2.5918694"
+         style="fill:none;stroke:#9a916c;stroke-width:1.07850289;stroke-miterlimit:4;stroke-dasharray:none"
+         transform="scale(-1,1)" />
+      <circle
+         cy="31.259842"
+         gorn="0.3.0.23.33"
+         r="1.6811363"
+         id="connector14pin-4-8"
+         cx="2.5901213"
+         style="fill:none;stroke:#9a916c;stroke-width:1.07850289;stroke-miterlimit:4;stroke-dasharray:none"
+         transform="scale(-1,1)" />
+      <circle
+         cy="18.571955"
+         gorn="0.3.0.23.34"
+         r="1.6811363"
+         id="connector16pin-8-5"
+         cx="2.5918694"
+         style="fill:none;stroke:#9a916c;stroke-width:1.07850289;stroke-miterlimit:4;stroke-dasharray:none"
+         transform="scale(-1,1)" />
+      <circle
+         cy="12.227131"
+         gorn="0.3.0.23.36"
+         r="1.6811363"
+         id="connector17pin-1-74"
+         cx="2.5918694"
+         style="fill:none;stroke:#9a916c;stroke-width:1.07850289;stroke-miterlimit:4;stroke-dasharray:none"
+         transform="scale(-1,1)" />
+      <path
+         style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.15930617;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         d="m -2.0681877,13.173173 c 0.145621,-0.08071 0.330796,-0.265891 0.411511,-0.411511 0.622862,-1.123783 -0.855413,-2.1914 -1.736179,-1.253872 -0.81193,0.864264 0.28406,2.24215 1.324668,1.665383 z"
+         id="path4771-1"
+         inkscape:connector-curvature="0" />
+      <path
+         style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.15930617;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         d="m -1.8891467,19.392976 c 0.19152,-0.16474 0.310403,-0.40168 0.350123,-0.697807 0.111675,-0.832601 -0.691022,-1.430115 -1.478933,-1.1009 -1.086009,0.453761 -0.733079,2.048142 0.453357,2.048142 0.240106,0 0.494822,-0.09407 0.675453,-0.249435 z"
+         id="path4773-8"
+         inkscape:connector-curvature="0" />
+      <path
+         style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.15930617;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         d="m -1.8259067,25.633223 c 0.446933,-0.446934 0.446933,-1.010291 0,-1.457224 -0.584867,-0.584868 -1.529099,-0.367153 -1.786189,0.411851 -0.35824,1.085447 0.969215,1.862343 1.786189,1.045373 z"
+         id="path4775-5"
+         inkscape:connector-curvature="0" />
+      <path
+         style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.15930617;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         d="m -2.2097727,32.27809 c 0.332498,-0.140304 0.707694,-0.653764 0.707694,-0.968498 0,-0.626382 -0.527206,-1.142782 -1.166687,-1.142782 -0.148501,0 -0.431671,0.144456 -0.629271,0.321013 -0.294619,0.263247 -0.359269,0.402791 -0.359269,0.775482 0,0.747274 0.78211,1.295571 1.447533,1.014785 z"
+         id="path4777-9"
+         inkscape:connector-curvature="0" />
+      <circle
+         cy="6.0632386"
+         gorn="0.3.0.23.36"
+         r="2.9393053"
+         id="connector17pin-1-7-7"
+         cx="-1.1756326"
+         style="fill:none;stroke:#9a916c;stroke-width:1.88565886;stroke-miterlimit:4;stroke-dasharray:none"
+         transform="scale(-1,1)" />
+      <path
+         style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.27853155;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         d="M 2.0912432,7.7173013 C 2.3458472,7.5761877 2.6696082,7.2524162 2.8107302,6.9978137 3.8997452,5.0329869 1.3151232,3.1663604 -0.22481167,4.8055387 -1.6443967,6.3166213 0.27184023,8.7257232 2.0912432,7.7173013 Z"
+         id="path4771-5-5"
+         inkscape:connector-curvature="0" />
+      <circle
+         cy="37.807037"
+         gorn="0.3.0.23.36"
+         r="2.9393053"
+         id="connector17pin-1-7-6-3"
+         cx="-0.8432799"
+         style="fill:none;stroke:#9a916c;stroke-width:1.88565886;stroke-miterlimit:4;stroke-dasharray:none"
+         transform="scale(-1,1)" />
+      <path
+         style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.27853155;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 1.7588932,39.461105 c 0.25461,-0.141113 0.57837,-0.464885 0.71949,-0.719487 1.08902,-1.964827 -1.49560997,-3.831453 -3.03553987,-2.192275 -1.41959003,1.511082 0.49665,3.920184 2.31604987,2.911762 z"
+         id="path4771-5-2-8"
+         inkscape:connector-curvature="0" />
+    </g>
+    <circle
+       cy="23.487305"
+       gorn="0.3.0.23.32"
+       r="1.5775316"
+       id="connector15pin-8"
+       cx="99.909523"
+       style="fill:none;stroke:#9a916c;stroke-width:1.01203704;stroke-miterlimit:4;stroke-dasharray:none" />
+    <circle
+       cy="29.440283"
+       gorn="0.3.0.23.33"
+       r="1.5775316"
+       id="connector14pin-4"
+       cx="99.907883"
+       style="fill:none;stroke:#9a916c;stroke-width:1.01203704;stroke-miterlimit:4;stroke-dasharray:none" />
+    <circle
+       cy="17.534323"
+       gorn="0.3.0.23.34"
+       r="1.5775316"
+       id="connector16pin-8"
+       cx="99.909523"
+       style="fill:none;stroke:#9a916c;stroke-width:1.01203704;stroke-miterlimit:4;stroke-dasharray:none" />
+    <circle
+       cy="11.58052"
+       gorn="0.3.0.23.36"
+       r="1.5775316"
+       id="connector17pin-1"
+       cx="99.909523"
+       style="fill:none;stroke:#9a916c;stroke-width:1.01203704;stroke-miterlimit:4;stroke-dasharray:none" />
+    <path
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.14948846;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 99.418111,12.468259 c -0.136647,-0.07574 -0.31041,-0.249506 -0.38615,-0.386151 -0.584477,-1.054526 0.802695,-2.056348 1.629179,-1.176598 0.76189,0.811 -0.26655,2.103971 -1.243029,1.562749 z"
+       id="path4771"
+       inkscape:connector-curvature="0" />
+    <path
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.14948846;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 99.250103,18.304748 c -0.179716,-0.154587 -0.291273,-0.376925 -0.328545,-0.654803 -0.10479,-0.781289 0.648436,-1.341979 1.387792,-1.033053 1.01908,0.425797 0.6879,1.921919 -0.425421,1.921919 -0.225308,0 -0.464326,-0.08827 -0.633826,-0.234063 z"
+       id="path4773"
+       inkscape:connector-curvature="0" />
+    <path
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.14948846;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 99.190761,24.160423 c -0.41939,-0.419392 -0.41939,-0.948029 0,-1.36742 0.548823,-0.548823 1.434859,-0.344525 1.676109,0.386471 0.33616,1.018554 -0.909484,1.747571 -1.676109,0.980949 z"
+       id="path4775"
+       inkscape:connector-curvature="0" />
+    <path
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.14948846;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 99.55097,30.395781 c -0.312007,-0.131658 -0.66408,-0.613474 -0.66408,-0.908812 0,-0.587779 0.494715,-1.072354 1.094787,-1.072354 0.139343,0 0.405063,0.135553 0.590493,0.301229 0.27646,0.247024 0.33712,0.377968 0.33712,0.727691 0,0.701221 -0.73391,1.215728 -1.35832,0.952246 z"
+       id="path4777"
+       inkscape:connector-curvature="0" />
+    <circle
+       cy="5.796494"
+       gorn="0.3.0.23.36"
+       r="2.7581623"
+       id="connector17pin-1-7"
+       cx="96.374207"
+       style="fill:none;stroke:#9a916c;stroke-width:1.76944971;stroke-miterlimit:4;stroke-dasharray:none" />
+    <path
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.26136625;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 95.515017,7.3486208 C 95.276103,7.2162036 94.972295,6.9123858 94.83987,6.6734738 93.817969,4.829735 96.243306,3.0781447 97.688338,4.616304 99.020437,6.0342619 97.222293,8.2948957 95.515017,7.3486208 Z"
+       id="path4771-5"
+       inkscape:connector-curvature="0" />
+    <circle
+       cy="35.583992"
+       gorn="0.3.0.23.36"
+       r="2.758162"
+       id="connector17pin-1-7-6"
+       cx="96.686073"
+       style="fill:none;stroke:#9a916c;stroke-width:1.76944971;stroke-miterlimit:4;stroke-dasharray:none" />
+    <path
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.26136625;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 95.826884,37.136122 c -0.238919,-0.132417 -0.542726,-0.436235 -0.675149,-0.675147 -1.021906,-1.843738 1.403439,-3.595328 2.848467,-2.057169 1.332103,1.417958 -0.466044,3.678591 -2.173318,2.732316 z"
+       id="path4771-5-2"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="opacity:1;fill:#1a1a1a;fill-opacity:1;fill-rule:evenodd;stroke:#1a641a;stroke-width:0.12525032;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4898"
+       width="7.8656044"
+       height="10.413616"
+       x="16.532246"
+       y="-21.990458"
+       transform="rotate(90)" />
+    <rect
+       style="opacity:1;fill:#1a1a1a;fill-opacity:1;fill-rule:evenodd;stroke:#1a641a;stroke-width:0.12525032;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4898-9"
+       width="7.8656044"
+       height="10.413616"
+       x="-56.111668"
+       y="-25.117941"
+       transform="scale(-1)" />
+    <rect
+       style="opacity:1;fill:#1a1a1a;fill-opacity:1;fill-rule:evenodd;stroke:#1a641a;stroke-width:0.10407644;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4898-7"
+       width="6.4465971"
+       height="8.7730427"
+       x="25.162745"
+       y="-72.905907"
+       transform="rotate(90)" />
+    <rect
+       style="opacity:1;fill:#1a1a1a;fill-opacity:1;fill-rule:evenodd;stroke:#1a641a;stroke-width:0.18897344;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4898-7-7"
+       width="11.900857"
+       height="15.667484"
+       x="7.313714"
+       y="-79.898178"
+       transform="rotate(90)" />
+  </g>
+</svg>

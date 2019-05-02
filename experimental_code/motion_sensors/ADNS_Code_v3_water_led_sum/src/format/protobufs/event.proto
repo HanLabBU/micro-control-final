@@ -1,0 +1,144 @@
+
+syntax  = "proto2";
+// package = devicelib;
+
+// import "sensor.proto";
+// import "time.proto";
+// import "google/protobuf/descriptor.proto"; // descriptor?
+// import "google/protobuf/any.proto";// any?
+import "generator/proto/nanopb.proto";
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/duration.proto";
+import "google/protobuf/timestamp.proto";
+
+
+message EventRegister{
+    repeated EventInfo events = 1;
+}
+message EventInfo{
+    required uint32 id                = 1 ; 
+    required string name              = 2 ; 
+    optional EventType type           = 3 ; 
+    optional string address           = 4 ; 
+    optional PayloadInfo payload     = 7 ; 
+}
+enum EventType{
+    INFO         = 1 ; 
+    COMMAND = 2 ; 
+    SETTING      = 3 ; 
+    STATUS       = 4 ; 
+    DATA  = 5 ; 
+    ACTION       = 6 ; 
+}
+message PayloadInfo{
+    optional uint32 count = 1;
+    repeated DataInfo data = 2;
+}
+message DataInfo{
+    required uint32 id = 1;
+    required DataType type = 2; // could use Kind
+    optional string name = 3;    
+    optional UnitInfo unit = 11;
+    optional Data min = 12;
+    optional Data max = 13;
+    optional Data resolution = 14;
+}
+message UnitInfo{
+    required string abbreviation = 1 ;
+    optional string name = 2 ;
+}
+
+// EVENTS {ID, TIMESTAMP, PAYLOAD[DATA]}
+message EventStream{
+    // optional DeviceInfo device = 1;
+    optional EventRegister register = 2;
+    optional google.protobuf.Timestamp start_time = 3;
+    repeated Event events = 4;
+    optional uint32 event_count = 5;
+    optional google.protobuf.Timestamp stop_time = 6;
+    optional string name = 7 ;
+}
+message Event{
+    required uint32 id = 1 ;
+    optional google.protobuf.Timestamp timestamp = 6 ;
+    optional google.protobuf.Duration duration = 7;
+    optional uint32 sequence = 8 ; 
+    optional Payload payload = 11 ; 
+}
+message Payload {
+    repeated Data data = 1;
+}
+message Data{
+    oneof data_type{
+        google.protobuf.DoubleValue double_data = 1;
+        google.protobuf.FloatValue float_data = 2;
+        google.protobuf.Int64Value int64_data = 3;
+        google.protobuf.UInt64Value uint64_data = 4;
+        google.protobuf.Int32Value int32_data =5;
+        google.protobuf.UInt32Value uint32_data =6;
+        google.protobuf.BoolValue bool_data =7;
+        google.protobuf.StringValue string_data =8;
+        google.protobuf.BytesValue bytes_data =9;
+    }
+    
+}
+
+// message NumericData{
+//     oneof num {
+//         sint32 signed_integer = 1;
+//         uint32 unsigned_integer = 2;
+//         float float32 = 3;
+//         double float64 = 4;
+//     }
+// }
+
+
+
+enum DataType{
+    NUMBER = 0;
+    STRING = 1;
+    BYTES = 2;
+    BOOLEAN = 3;
+    INTEGER = 4;
+    ARRAY = 5;
+    OBJECT = 6;
+}
+
+// message Timestamp{
+//     required uint32 sec  = 1;
+//     optional uint32 nsec = 2;
+// }
+// optional NumericData numeric_data = 1;
+// message StringData
+// {
+//     optional string short_string = 1 [(nanopb).max_size=7];
+//     optional string medium_string = 2 [(nanopb).max_size=15];
+//     optional string long_string = 3 [(nanopb).max_size=31];
+// }
+// message BytesData
+// {
+//     optional bytes single_byte = 1 [(nanopb).max_size=1,(nanopb).fixed_length = true];
+//     optional bytes double_byte = 2 [(nanopb).max_size=2,(nanopb).fixed_length = true];
+//     optional bytes short_bytes = 3 [(nanopb).max_size=8,(nanopb).fixed_length = true];
+//     optional bytes medium_bytes = 4 [(nanopb).max_size=16];
+//     optional bytes long_bytes = 5 [(nanopb).max_size=32];
+// }
+// message BooleanData
+// {
+//     required bool value = 1;
+// }
+
+
+
+// NumericData numeric_data = 1;
+// StringData string_data =2 ;
+// BytesData bytes_data = 3;
+// BooleanData boolean_data = 4;
+
+// message FieldRegister{
+//     repeated google.protobuf.FieldDescriptorProto fields = 1;
+// }
+// message AnyData{
+//     option (nanopb_msgopt).proto3 = true;
+//     repeated google.protobuf.Any data = 1;
+// }

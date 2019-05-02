@@ -1,0 +1,48 @@
+syntax  = "proto2";
+package = devicelib.adafruit;
+
+enum SensorsType 
+{
+    option allow_alias = true;
+           UNKNOWN             = 0;
+           ACCELEROMETER       = 1;
+           MAGNETIC_FIELD      = 2;
+           ORIENTATION         = 3;
+           GYROSCOPE           = 4;
+           LIGHT               = 5;
+           PRESSURE            = 6;
+           PROXIMITY           = 8;
+           GRAVITY             = 9;
+           LINEAR_ACCELERATION = 10;
+           ROTATION_VECTOR     = 11;
+           RELATIVE_HUMIDITY   = 12;
+           AMBIENT_TEMPERATURE = 13;
+           VOLTAGE             = 15;
+           CURRENT             = 16;
+           COLOR               = 17;
+}
+
+// maps to adafruit sensor_t
+message Sensor 
+{  
+    optional string      name       = 1 [ max_size = 12 ];
+    optional sint32      version    = 2;
+    optional sint32      sensor_id  = 3;
+    optional sint32      type       = 4;
+    optional float       max_value  = 5;
+    optional float       min_value  = 6;
+    optional float       resolution = 7;
+    optional sint32      min_delay  = 8;
+
+}
+
+// Sensors Event (Following Adafruit model)
+message SensorsEvent 
+{
+    optional sint32          version   = 1;
+    optional sint32          sensor_id = 2;
+    optional sint32          type      = 3;
+    optional sint32          reserved0 = 4;
+    optional sint32          timestamp = 5;
+    repeated float           data      = 6 [ max_count =  4];
+}

@@ -1,0 +1,15 @@
+# This file defines the nanopb-specific options for the messages defined
+# in fileproto.proto.
+#
+
+
+
+*.name  max_size:128
+*.address max_size:128
+UnitInfo.abbreviation max_size:4
+PayloadInfo.data max_count:16
+Payload.data max_count:16
+EventRegister.events max_count:128
+
+
+//EventStream.events max_count:
