@@ -1,0 +1,39 @@
+// Protocol-Buffers file defining format of sensor measurements for sending of
+// serial line and saving in file
+
+syntax  = "proto2";
+package = devicelib;
+import "time.proto"
+// =============================================================================
+// Sensor/Device
+// =============================================================================
+// todo: Generic Sensor Message-types in separate (common/reusable) proto file
+//      -> import "commonlib/proto/sensor.proto"
+//      -> import "commonlib/proto/time.proto"
+//      -> import "commonlib/proto/units.proto"
+//      -> import "commonlib/proto/interface.proto"
+
+
+
+enum ReportingMode 
+{
+    option allow_alias = true;
+    CONTINUOUS      = 0;
+    ONE_SHOT        = 1;
+    ON_CHANGE       = 2;
+    SPECIAL_TRIGGER = 3;
+}
+
+
+// Sensor Event (Following Android model)
+message SensorEvent 
+{
+    optional uint32 accuracy  = 1;
+    optional uint32 sensor    = 2;
+    optional uint64 timestamp = 3;
+    repeated float  values    = 4 [max_count=4];
+}
+
+message State {}
+message Configuration {}
+//[default = 128]
