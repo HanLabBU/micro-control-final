@@ -1,0 +1,171 @@
+// Protocol-Buffers file defining format of sensor measurements for sending of
+// serial line and saving in file
+
+// import "type.googleapis.com"
+// google.protobuf.Field field_info
+//required bytes data = 1 [(nanopb).max_size = 40, (nanopb).fixed_length = true];
+
+syntax  = "proto2";
+// package = devicelib;
+
+// import "sensor.proto";
+// import "time.proto";
+import "../generator/proto/nanopb.proto";
+// import "google/protobuf/descriptor.proto"; // descriptor?
+// import "google/protobuf/any.proto";// any?
+
+
+message Record
+{
+    optional DeviceInfo device = 1;
+    // repeated map<sint32, EventInfo> event_map = 2;
+    optional Timestamp start_time = 3;
+    repeated Event event_stream = 4;
+    optional sint32 event_count = 5;
+    optional Timestamp stop_time = 6;
+    optional string name = 7 [(nanopb).max_size=40];
+}
+
+message DeviceInfo
+{
+    option (nanopb_msgopt).msgid = 101;
+    optional sint32 id          = 1 ;  
+    optional string name        = 2 [(nanopb).max_size=40];  
+    optional string address     = 3 [(nanopb).max_size=40];  
+    optional string description = 4 [(nanopb).max_size=120];  
+    repeated EventInfo events       = 10; 
+    repeated CommandInfo commands   = 11; 
+    repeated SettingInfo settings   = 12; 
+    repeated NodeInfo nodes     = 13;     
+    repeated TriggerInfo triggers    = 14;
+}
+
+message CommandInfo
+{
+    option (nanopb_msgopt).msgid = 102;
+    required sint32 id                = 1 ; 
+    optional string name              = 2 [(nanopb).max_size=40]; 
+    optional string address           = 3 [(nanopb).max_size=40]; 
+    repeated DataInfo arguments = 4 ; 
+}
+
+message SettingInfo
+{
+    option (nanopb_msgopt).msgid = 103;
+    required sint32 id                = 1 ; 
+    optional string name              = 2 [(nanopb).max_size=40]; 
+    optional string address           = 3 [(nanopb).max_size=40]; 
+    optional DataInfo value = 4 ; 
+}
+
+message NodeInfo
+{
+    option (nanopb_msgopt).msgid = 104;
+    optional sint32 id          = 1 ;  
+    optional string name        = 2 [(nanopb).max_size=40];  
+    optional string address     = 3 [(nanopb).max_size=40];  
+    optional string description = 4 [(nanopb).max_size=120];  
+    optional NodeType type = 5;
+    repeated SettingInfo settings   = 12 ;
+    repeated EventInfo events = 13;
+}
+
+enum NodeType
+{
+    UNKNOWN = 0;
+    SENSOR = 1;
+    ACTUATOR = 2;
+    // GPIO = 3;
+    // PWM = 4;
+    VIRTUAL = 10;
+}
+
+message EventInfo
+{
+    option (nanopb_msgopt).msgid = 105;
+    required sint32 id                = 1 ; 
+    optional string name              = 2 [(nanopb).max_size=40]; 
+    optional string address           = 3 ; 
+    optional EventType type           = 4 ; 
+    optional PayloadInfo payload     = 7 ; 
+}
+
+message PayloadInfo
+{
+    optional uint32 count = 1;
+    repeated DataInfo data = 2;
+}
+
+message DataInfo
+{
+    option (nanopb_msgopt).msgid = 106;
+    optional sint32 id = 1;
+    optional string name = 2[(nanopb).max_size=40];
+    // optional google.protobuf.Kind kind = 3;
+    optional bool is_numeric = 4;
+    optional UnitInfo unit = 11;
+    optional NumericType min = 12;
+    optional NumericType max = 13;
+    optional NumericType resolution = 14;
+}
+
+message NumericType
+{
+    oneof num {
+        sint32 integer_num = 1;
+        float float_num = 2;
+        double double_num = 3;
+        string string_num = 4 [(nanopb).max_size = 10];
+    }
+}
+
+message UnitInfo
+{
+    required string abbreviation = 1 [(nanopb).max_size=4];
+    optional string name = 2[(nanopb).max_size=40];
+    optional bool is_si = 3;
+}
+
+message Event
+{
+    option (nanopb_msgopt).msgid = 107;
+    required sint32 id = 1 ; 
+    optional EventInfo info = 2;
+    optional Timestamp timestamp = 5 ; 
+    optional uint32 sequence = 6 ; 
+    optional Payload payload = 7 ; 
+}
+
+message Payload 
+{
+    optional NumericType value = 1;
+}
+
+enum EventType
+{
+    INFO         = 1 ; 
+    ECHO_COMMAND = 2 ; 
+    SETTING      = 3 ; 
+    STATUS       = 4 ; 
+    SENSOR_DATA  = 5 ; 
+    ACTION       = 6 ; 
+}
+
+message Timestamp
+{
+    optional uint32 sec  = 1;
+    optional uint32 nsec = 2;
+}
+
+enum ReportingMode 
+{    
+    CONTINUOUS      = 0;
+    ONE_SHOT        = 1;
+    ON_CHANGE       = 2;
+    SPECIAL_TRIGGER = 3;
+}
+
+message TriggerInfo
+{
+
+}
