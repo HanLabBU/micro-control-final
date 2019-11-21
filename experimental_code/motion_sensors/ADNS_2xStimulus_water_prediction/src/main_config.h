@@ -26,9 +26,9 @@
 const int CS_PIN_A = 20;
 const int CS_PIN_B = 21;
 const int TRIGGER_PIN = 4;
-const int WATER_PIN = 7;
-const int LED_PIN = 17;
-const int IR_PIN = 5;
+const int WATER_PIN = 5;
+const int LED_PIN = 7;
+const int IR_PIN = 17;
 //const int WATER2_PIN = 9;
 const int LED2_PIN = 8;
 
@@ -89,7 +89,7 @@ typedef struct {
   time_t timestamp;
   labeled_sample_t left;
   labeled_sample_t right;
-  float_t IR
+  float_t IR;
 } sensor_sample_t;
 
 // Delimiter & Precision for Conversion to String
@@ -122,13 +122,14 @@ static inline void endDataFrame();
 static inline void endAcquisition();
 void getRandomFrames(int samplingInterval,
   int jitterRange[], int nreps);
+void getLEDFrames(float LED1_offset_s_int, float LED2_offset_s_int, int samp_interval_ms_int);
 // Task: TRIGGERED_ACQUISITION
 // (capture/acquire/read-loop)
 static void captureDisplacement();
 
 // Task: DATA_TRANSFER
 static void sendHeader();
-static void sendData(sensor_sample_t sample, bool waterOn);
+static void sendData(sensor_sample_t sample, bool waterPin, bool led1Pin, bool led2Pin);
 
 
 #endif

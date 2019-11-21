@@ -7,7 +7,9 @@
 #include "main_config.h"
 #include "vector"
 #include <algorithm>
-#include <random>
+//#include <ctime>
+//#include <windows.h>
+//#include <random>
 const String fileVersion = __TIMESTAMP__;
 
 // Create Sensor Objects with Specified Slave-Select Pins
@@ -32,6 +34,8 @@ std::vector<int> waterFrames;
 std::vector<int> LED1Frames;
 std::vector<int> LED2Frames;
 volatile uint32_t waterIndex;
+volatile uint32_t led1Index;
+volatile uint32_t led2Index;
 int range_in_seconds[2];
 volatile uint16_t waterLength;
 volatile uint32_t nreps = 0;
@@ -137,8 +141,8 @@ static inline void beginAcquisition(char input[], int8_t length) {
 
     range_in_seconds[0] = water_spacing_s_int-water_jitter_s_int;
     // sense check that LEDs will never overlap
-    if (range_in_seconds[0] < std::max(LED1_offset_s_int,LED2_offset_s_int) ){
-      range_in_seconds[0] = std::max(LED1_offset_s_int,LED2_offset_s_int);
+    if (range_in_seconds[0] < std::max((float)LED1_offset_s_int,(float)LED2_offset_s_int) ){
+      range_in_seconds[0] = std::max((float)LED1_offset_s_int,(float)LED2_offset_s_int);
       water_spacing_s_int = range_in_seconds[0] + water_jitter_s_int;
     }
     range_in_seconds[1] = water_spacing_s_int+water_jitter_s_int;
@@ -193,10 +197,11 @@ void getLEDFrames(float LED1_offset_s_int, float LED2_offset_s_int, int samp_int
     ledsNum.push_back(1);
   }
   // random shuffle of the water frame to decide which LED will turn on
-  std::random_device rd;
-  std::mt19937 g(rd());
+  //std::random_device rd;
+  //std::mt19937 g(rd());
 
-  std::shuffle( ledsNum.begin(), ledsNum.end() ,g);
+  //srand(time(0));
+  std::random_shuffle( ledsNum.begin(), ledsNum.end());
 
   for (int j = 0; j < nTrials; ++j) {
     if (ledsNum[j] == 1){
@@ -210,6 +215,7 @@ void getLEDFrames(float LED1_offset_s_int, float LED2_offset_s_int, int samp_int
 void getRandomFrames(int samp_interval_ms_int, int *range_secs, int nreps)
 {
   waterFrames.clear();
+  //srand(time(0));
   int range_frames[2];
   for (int j=0; j < 2; j++)
   {
@@ -229,10 +235,13 @@ static inline void endAcquisition() {
     // End IntervalTimer
     captureTimer.end();
     waterFrames.clear();
+    LED1Frames.clear();
+    LED2Frames.clear();
     waterPinON = false;
     fastDigitalWrite(TRIGGER_PIN, LOW);
     fastDigitalWrite(WATER_PIN, LOW);
     fastDigitalWrite(LED_PIN, LOW);
+    fastDigitalWrite(LED2_PIN, LOW);
     // Trigger start using class methods in ADNS library
     sensor.left.triggerAcquisitionStop();
     sensor.right.triggerAcquisitionStop();
@@ -290,7 +299,7 @@ void captureDisplacement() {
 
   currentSample.left = {'L', sensor.left.readDisplacement(units)};
   currentSample.right = {'R', sensor.right.readDisplacement(units)};
-  currentSample.IR = {analogRead(IR_PIN)}
+  currentSample.IR = {analogRead(IR_PIN)};
   // Send Data
   sendData(currentSample,waterPinON,LED1PinON,LED2PinON);
   currentFrameTimestamp = millisSinceAcquisitionStart;
@@ -313,7 +322,9 @@ void sendHeader() {
       "]" + delimiter + flatFieldNames[1] + " [" + dunit + "]" + delimiter +
       flatFieldNames[2] + " [" + tunit + "]" + delimiter + flatFieldNames[3] +
       " [" + dunit + "]" + delimiter + flatFieldNames[4] + " [" + dunit + "]" +
-      delimiter + flatFieldNames[5] + " [" + tunit + "]" +delimiter + " waterPin " "\n"));
+      delimiter + flatFieldNames[5] + " [" + tunit + "]" +delimiter +
+      " IR"+ delimiter +" waterPin " + delimiter + " LED1pin " + delimiter +
+      " LED2pin " "\n"));
 }
 
 void sendData(sensor_sample_t sample, bool waterPin, bool led1Pin, bool led2Pin) {

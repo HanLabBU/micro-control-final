@@ -1,0 +1,49 @@
+{
+    "name": "Board Identify", 
+    "version": "0.1", 
+    "keywords": [
+        "other"
+    ], 
+    "description": "An Arduino library which allows identification of over 100 different boards/controllers.", 
+    "frameworks": [
+        "arduino"
+    ], 
+    "platforms": [
+        "atmelavr", 
+        "atmelsam", 
+        "espressif32", 
+        "espressif8266", 
+        "intel_arc32", 
+        "microchippic32", 
+        "nordicnrf51", 
+        "nordicnrf52", 
+        "ststm32", 
+        "teensy", 
+        "timsp430"
+    ], 
+    "authors": [
+        {
+            "email": "matthew_fryer@hotmail.com", 
+            "url": null, 
+            "maintainer": true, 
+            "name": "Matthew Fryer"
+        }
+    ], 
+    "repository": {
+        "type": "git", 
+        "url": "https://github.com/MattFryer/Board_Identify"
+    }, 
+    "homepage": null, 
+    "export": {
+        "include": null, 
+        "exclude": [
+            "extras", 
+            "docs", 
+            "tests", 
+            "test", 
+            "*.doxyfile", 
+            "*.pdf"
+        ]
+    }, 
+    "id": 2119
+}
